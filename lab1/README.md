@@ -22,6 +22,9 @@
 
 С помощью команды `usermod` добавляем пользователей test1, test2 в группу sudo, тем самым давая права на выполнение команд от root.
 
+![Screenshot_5](https://github.com/user-attachments/assets/404d1779-41f0-4d91-8b14-cb5e656b1028)
+
+
 Для пользователя test3 создаем файл в `/etc/sudoers.d/`, в котором даём этому пользователю права на команду tcpdump (/usr/bin/tcpdump)
 
 ![Screenshot_8](https://github.com/user-attachments/assets/3f034d49-60c7-41e4-a38e-6897688da9ca)
