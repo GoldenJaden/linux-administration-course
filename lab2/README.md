@@ -2,7 +2,18 @@
 
 ## Задание 1. Утечка памяти
 
-Создадим процесс, который будет бесконечно потреблять оперативную память.
+Создадим процесс, который будет бесконечно потреблять оперативную память: постоянно увеличивать длину переменной окружения.
+
+![Screenshot_7](https://github.com/user-attachments/assets/18b0896d-070e-4ebb-902c-3051985bc2c4)
+
+Посмотрим состояние системы на начало запуска команды:
+
+![Screenshot_8](https://github.com/user-attachments/assets/6b618d7e-2ba0-4122-99d2-288187945c70)
+
+И спустя 3 минуты:
+
+![Screenshot_9](https://github.com/user-attachments/assets/ca5a605e-8b78-43d5-8712-18fed7a985d1)
+
 
 ## Задание 2. Зомби процесс
 
@@ -10,19 +21,52 @@
 
 Напишем простую команду, которая запустит child процесс с командой sleep 0 (он завершится сразу), а родительский процесс после этого сразу же выполнит sleep 1000.
 
+![Screenshot_11](https://github.com/user-attachments/assets/78485cdd-5720-4f5e-9345-aa136d4a2df7)
+
+Найдём этот процесс при помощи ps и grep. В столбце status у процесса-ребёнка видим Z, что означает зомби процесс.
+
+![Screenshot_12](https://github.com/user-attachments/assets/b6a63e68-0480-4fd3-aa96-f782fdb8f742)
+
 
 ## Задание 3. Cronjob
 
-Было написано 3 cron задания:
+Было добавлено 3 cron задания при помощи директивы `crontab -e`, для редактирования cron файла текущего юзера:
+
+![Screenshot_6](https://github.com/user-attachments/assets/6bb84436-f3cd-4d43-b82a-02920cf38178)
 
 1) Ежедневный бэкап файла
 
+![Screenshot_1](https://github.com/user-attachments/assets/0aa70dd0-2bb3-4888-9337-d1f0287b9292)
+
 2) Ежедневная очистка папки
+
+до:
+![Screenshot_3](https://github.com/user-attachments/assets/d29787d9-5e29-4c47-8e65-1e7aacdb31de)
+
+после:
+![Screenshot_5](https://github.com/user-attachments/assets/879250dc-dd2b-4efb-8645-155dd091dcf5)
 
 3) Ежедневное сохранение отчета по работе системы
 
-## Задание 4. Текстовые инструменты
+Данный cronjob запускает баш скрипт. Содержание скрипта:
+
+![image](https://github.com/user-attachments/assets/34062eee-b4d8-4cb2-af90-dc6ca3c1666b)
+
+Результат:
+
+![Screenshot_4](https://github.com/user-attachments/assets/f6d57e4f-80d1-4459-ada7-11fa6f91da11)
+
+## Задание 4. Инструменты работы с текстом
 
 Для выполнения данного задания использовался инструмент awk. Он предоставляет функционал работы с колонками в тексте, а также много других функций, таких как условия и циклы.
 
+Был написан скрипт для получения суммы колонок VSZ и RSS, где:
+
+- VSZ - Это общий объём виртуальной памяти, выделенной процессу ядром, включая: загруженный код, данные, библиотеки, подкачку и т.д
+- RSS - Объём физической памяти RAM, используемой процессом
+
+![image](https://github.com/user-attachments/assets/64c1d758-3d0c-4b6b-992a-e8f43856e679)
+
+Результат выполнения скрипта для процесса с pid 1:
+![Screenshot_23](https://github.com/user-attachments/assets/e0d7636d-8271-4150-9b06-f0aee29ef2a9)
 
