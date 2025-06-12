@@ -41,9 +41,11 @@
 2) Ежедневная очистка папки
 
 до:
+
 ![Screenshot_3](https://github.com/user-attachments/assets/d29787d9-5e29-4c47-8e65-1e7aacdb31de)
 
 после:
+
 ![Screenshot_5](https://github.com/user-attachments/assets/879250dc-dd2b-4efb-8645-155dd091dcf5)
 
 3) Ежедневное сохранение отчета по работе системы
@@ -68,5 +70,6 @@
 ![image](https://github.com/user-attachments/assets/64c1d758-3d0c-4b6b-992a-e8f43856e679)
 
 Результат выполнения скрипта для процесса с pid 1:
+
 ![Screenshot_23](https://github.com/user-attachments/assets/e0d7636d-8271-4150-9b06-f0aee29ef2a9)
 
